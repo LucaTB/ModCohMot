@@ -3,6 +3,27 @@ body {
     justify-content: center;
 }
 
+
+.button-70 {
+  background-image: linear-gradient(#0dccea, #0d70ea);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Montserrat,sans-serif;
+  font-size: .9em;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+a {
+    color: white;
+}
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
 
 * {
@@ -87,3 +108,32 @@ ul li:nth-child(6n + 6) a:before {
   background: #ffeaa7;
 }
 
+/* Estilos generales para dispositivos pequeños */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Open Sans', sans-serif;
+   }
+   
+   /* Estilos para dispositivos medianos */
+   @media screen and (min-width: 768px) {
+    body {
+       font-size: 16px;
+    }
+    ul li {
+        size: 1.5em;
+    }
+   }
+   
+   /* Estilos para dispositivos grandes */
+   @media screen and (min-width: 992px) {
+    body {
+       font-size: 18px;
+    }
+   }
+   
+   /* Estilos para dispositivos extra grandes */
+   @media screen and (min-width: 1200px) {
+    body {
+       font-size: 20px;
+    }
+   }

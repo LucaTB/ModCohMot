@@ -1,1 +1,73 @@
-<p>pdi works!</p>
+<button class="button-70" role="button"><a href="/landing">Volver</a></button>
+
+<div class="container">
+<style>
+    .gallery {
+      --g: 8px;
+      /* the gap */
+      --s: 500px;
+      /* the size */
+      display: grid;
+      border-radius: 50%;
+    }
+  
+    .gallery>img {
+      grid-area: 1/1;
+      width: var(--s);
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+      transform: translate(var(--_x, 0), var(--_y, 0));
+      cursor: pointer;
+      font-size: 0;
+      z-index: 0;
+      transition: .3s, z-index 0s .3s;
+    }
+  
+    .gallery img:hover {
+      font-size: var(--s);
+      z-index: 1;
+      transition: transform .2s, font-size .3s .2s, z-index 0s;
+    }
+  
+    .gallery:hover img {
+      transform: translate(0, 0);
+    }
+  
+    .gallery>img:nth-child(1) {
+      clip-path: polygon(50% 50%, .5em 1.2em, 0 1em, 0 0, 100% 0, 100% 1em, calc(100% - .5em) 1.2em);
+      --_y: calc(-1*var(--g))
+    }
+  
+    .gallery>img:nth-child(2) {
+      clip-path: polygon(50% 50%, calc(100% - 1.2em) 0.5em, calc(100% - 1em) 0, 100% 0, 100% 100%, calc(100% - 1em) 100%, calc(100% - 1.2em) calc(100% - .5em));
+      --_x: var(--g)
+    }
+  
+    .gallery>img:nth-child(3) {
+      clip-path: polygon(50% 50%, calc(100% - .5em) calc(100% - 1.2em), 100% calc(100% - 1.2em), 100% 100%, 0 100%, 0 calc(100% - 1em), .5em calc(100% - 1.2em));
+      --_y: var(--g)
+    }
+  
+    .gallery>img:nth-child(4) {
+      clip-path: polygon(50% 50%, 1.2em .5em, 1em 0, 0 0, 0 100%, 1em 100%, 1.2em calc(100% - .5em));
+      --_x: calc(-1*var(--g))
+    }
+  
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-content: center;
+      background: #005EB8;
+    }
+  </style>
+  
+  <div class="gallery">
+    <img src="https://psico.edu.uy/sites/default/files/CIBPSI.jpg" alt="CIBPSI">
+    <img src="https://cibpsi.psico.edu.uy/sites/default/files/Logo%20linea%201.jpg" alt="MAL">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAELCAMAAABULxzgAAAA81BMVEX///9rHn6Wvw3//v////1rHn9lAHiUvQCOugCVvQ5hAHWfea2ge6q6m8G5ncKcxB3r8dNmDnr6++/4/PTKu9B4Oo1aAHD28/jL3piPvQBmE3m61XHy5/LV5a5zLojM3ZyvlLhqH3tgAHFqHIHw5/BnAH1bAG1cAHdpIXfYytvKts/DrMjp3evm1+r78/qsirRyNoJ8Q4zk78XW5ajw9+GqyUGuzVXd7bygxC660nbG2oyQX5zVxNiihKloEoWCTJCHUJuxz2OPWp+PYpePYaKYbaKixDWVcaCDUpBuMYGnebHCrcathrPSt9iki6qGYJDXwd1bfd9XAAAQs0lEQVR4nO2de2PathbA5UgyoFBWh2CKm7LIxhDAQMiytlnSsjVjJX3cu+//aa7kFwb8EFgr8a7PX1tj5B+Ho6Mj6egIgFJKKaWUUkoppZR/syAEIZTRjOhzQiL6WgnkYoKAOJPgswg44xe5pfFimP2m25s3P78SkZ9/uRX5KSEYzokqQQaNNP2A5s1vv1Yq1U5FTKrVt7cwCx+ihm4oMsROgYc3r2vVTqdSq50IS6X6Lt1yEAQjgjGWAa/GwvOu1/zlfbVycrIHOJdapXqT2hsRbBNLBjkTkgT/rsbRD5DK+wyzuVQlsSfAg5e/Vg8i58IMJ0Ugaskx+AR4CF51DtM6l1rldari29LYY+HP3h6u9hNuNxnwUjprLDwEt+8PV7ur+p9S4af/pOZva/nYs+H/Oc3nZj8aPEJnudmPqPlfc7Mfy+YRuMvPfiTNI/Cus2c08Hzg4ZkE9KPB33WKC3+7T+z7rOBZKPhaQm89DjxAZ3LYjwEPwW9SLP5INv+THPajwL/MFQcfGV6W1RwFXkJUczR45mukePkjwEMkzeSPofl3xYVH4FVx4ZmzkdVfj6F5GdOQI8FLi8r+9fCy2P8Vmkcl/P8DvCz2UvMlfFHgZbGXmt8PXv62TgkvCC+N/Qjw4KnAmgdz2ZvIPw4egfviwgMw04oLj0aksPAQOURWjz0CPLiyJNEfweZBXSsw/IMph/0Y8AgYtLDwzFlKStQ6Bjy66Msx+qPAg6WcceooZoMcOXZzFHgAPtgFhm9TRUJS63HgEXogSlHhWYxQt2lu/COZDeOffywuPGrT3DPxo8ED4Bg5vT0+IjxwlJwTwiPCQ9Trark8pnpEzbPX3hOFHsxO7XMf/oftw27Ag4b+8XD4fs9v5aYqKW9iP3jkLIh1kMfHVFt4x1NYK7LY94Fnht8E508Dhr+/3i190gyOp/zygzKdtnTPXg9HC1PljmevzmuZ4/BcEASvJdHvBe+LM2sNVM1QqCg+Vck4qgN0V61IsZ2fxM/jRd7eG9d/x6Q/0IWEfuuh9ZEm2ETg5V2tKkEqe8OHh9qm0wshmXKDi7zF/SLorJlXzs6a+ys+hBA6/+k9WEopBRGYX45m8nuctU5vR0orewpELyXI7Y5H2+Ow9+GCzmQMJdXKHy93T8G3BQV6WtzfBtBZpZZfTiqV2m+b7+59uDY0zRAQrTtfNobtgzQvZeLA4pjq3Xpk5hMD21DEjmdTxdBU1VyNp2xkhvuoX9rpDkZ/s/7hZ/q+cwJskMFnB6F9SjBIhI8cvB2RgyY0mv7J2aejS4Q/qd56TULYxXR/dC4G+dYWr38hE77zxm0SogdydeAiBFVsJbtuxT+i+Z+9Jvk+0YHwWMGWecmHThH1S4SvdQL403xrb+RR0OU/R3hqr6BQv32O8MztrNrFhVfUR5GiO88UnpI6yO6zzxRewfoo23CeKzyjvyguPP24yrT6ZwuPFTLKcvfPFp5JN6vLPmf4jeXPosFbSoE1j/vf063+OcNT7VNxNa9QvVdYzbMQJ73LPm94488CwytqkeF1p7jwVB0VF14hl8WFt4wvxYVXjN+LDH9dXHhsdQsMr5TwJXwJX8KX8CV8CV/CHwn+pPpLkeHfFBn+psjwt0WGbxYXvvI+SEEvIHznDhRV8zWeLFRU+JNa5QwWFr7yh59jVkR438sXEr7yFyouvB8bFBG+Vnl/VlzNR+7wKRp8rfM20mTB4E9qZ8WFZ711vWFaMPjKXTQZr1jwnT8QahYSvnbS+bW5kZ1RIPiTztvmZm5GgeCrr7dvyPuB8M1chyc7td92Emd/HHy+Qved9zdgJ+FaJjxOhYfgVe3ASve1SvWuGdOkzE1kbZkKf/CtT53q25exTcrMPRicp1oNCkvdix0q8q4urHSq/GRUbAqYTM1npcjxQv2VE+HrFJlf71Sqf726RUmnguTBW2SYlVCMwMs/KsJn0TqVv+7e3IIErUuFN/Sx0BGGs5s3QvLu5a0XP6Lkw38QfVG1/KLqi4kAORC/BxcJnYcYn9Zzy7fxRCCD3ocXOdcm9iX3OmSW2o6k4677COSp4z/souJSSimllFL+HwUiXksiJQBbC59M8cEXilz4ntwIH1LdVvIOcZzCj2OyD9YGdWJQHni37obfWN6wgJe2mV5cOI4zFdADdB/M9U6mo3aPtXIh8r7ERrihoIvRbNUlfcJEJ0+Pl7yoAvvLTrssnut9/Xxt8id1bXXJ890h3GguKCyR9N34+9rDxnJOia4T0u8ri/pXB4BDfkb2EWfWMlXN8EsuYIw1mxiPo/ZuDI/A8J7YmlsQG2OLPTcfoc0FtFHfVl15Snphe/SomaqB/bLaWDFs22zNHLBfvRDoVgKbmwPejhWZ1FA2kSd41tuwf/afzmpgRA+rU2rp88lGgSdeA8GdF8XlNPMfbmYRzQXHkWawoZHF+T7hNf8BR092UvFEbJN6e+O3HA9iqkkbZiP60nOvyjo2WrsvZPbygSSWArfM6/TFgy14Xv3uapcnxCck2p3qg7gC6tgy65EfPA2elwRJfJlCsda/FEYHY11TcHJFd2b9RsgOwdKMrTKHqdKPHIJOhIeovSIZlfZUQXjmSj4PsmotYGNdymU2SHyKDsYgEx4MNTWjrAYWhEdoulDDapX8fdTSVJt5CuZ2KFOwjxBq/mF93QFVmD+ybU3xP8+Q1isuCfCsd+msXfcDvHVKFUNVeSsGZgbj/aKC8BBdXEdWW6iiEnN+etlovJgtW31V831PCA/RFQ7cEf2ot740GpdfuroWfHvrKahcEA/PTXT9M2PLsHXlU52977L+STNtg9I94NH0KdLrjQGdRWr9TB9OCTGi8Ozdg4Adk889/8HhIqjqTdUP6Zofk7Urxpq++NoDgV9HvcaceB1ZAJ65v+Y8UBr7CdXrc+6o3ab8Ul9w3HI7V2g214F/t7SHyP7xN8IrLVJMusMUzUM2dIXs2DBPL7zADHpLD0wc5kLZ4CIG/2gHPzj9qI13IyzW9Khrr+EdPbAP01lHgewruzXJP5IXKM3m0YTgYEzC5L4HtoX5qt6palABeAheBL2PKoNVLyYO5tEunBEjMJtG8GVJIxLA8pF1bhnmspfmKtnQFI6mGJtjEBMH8JaGc6Jlw6PJ2keSekpEMaSq3xOWfg/BZLMMFkQT/XoY/eHi4D+vh6aPyQuSTFtskMoKEGAriAiwPksJ5viw4juRheHb63JzoZD938PmnCQG/nt4L4uh9JLDF9bK9/9kwENw6RsNpvwgYfLTCIZ/bPk/vLb1Zb1JSfRftuEhv8LKr59qWWk1MXhhsKw5AuoFiqD256woNPhzFD79E9vwKHK7hp163FVI6kFjxlx4YfZ3v2a69t8so9yCZzFwGNCQUe4F2Z5uef5dMcUVEW5+9NMPyO/AQzALPJu6zDPn9WRm+1ajzsQVMQ5cpbbKeHIbvh2M5NiY5p5qIy0cLvaonNcLBinWT2Dc5DYJnsUFgeIb+ctChtGhnVUXJCIIrHy7wVidOyDlW2/D+05WwSbMa/AR6zWm4h9iw5/pB8kWC+NmPW+tRAC+rYdGmn/XBnX9xtJ3yrc/FY2GWCSnLodeYJUFj4L5OB3kd5PACW6TIg/7fAyhdsjO0TRy3Yj/5aLw7DvX/QL36QekBSW4/w2rQnXP1vBoYq4nsGzMtFRSn8SsFG2ZzbUfCmvfJMAHN+8Z8z37PkIPZnRpx51TzB926Dfg0dT0vzBJLccgKMF1TNrpnh9kjM6VujFjp9QyWw9bO7FReDbZDHwb2Q3i95eFD283sp/dEticLtnoHLV9f26BkkJiNAy9/CEVZbel5cd3mdWf4qSJ/n7aWXrRWFOJK2bndtBJJGyUwy71FXaQDfKFKkyMzYVGPKhHLH9T82M/CMRPErbmYfCrp9czSRY+uV2Z2kbXpbxcZuw0cA3fklAyOjc84AGRUzeIFVn6w+Q0ZEvSvAz4rv8++2uudqbj6350dXndhTYGKTAKbD6zPJyIBHfbHuBt1sK9C3pYRK8MtQNXuNlh195GRl5IcLetVs8xq0HeXtDoSg09jxbMzDf9vCPVz9eDEXaR1wj5etcyXDnGbIq1A8/my8E8YL9QKl5QsNyEjb1im7im+OU238K1Y/USxMCDYKfLnuWHXxthdhqgkIS3P1pzzw43Oyx49GeBLJbKLagdREraqQx4FF6KjvteiLyheQguvW6BFYEyppkvC6dlFpWTF9YIlvJ0byFvKyQeDmjo3vJqK7LGmlEoT1BQuH6selt526sH4S9D82fRhS+zsnLVxZqDIAhz/GFvewIeuDc5yloEuiAN0dRQd5l62Ljf7XQM3h/2sH8f3Db8JLzFmPm3vW4piJNzf0rM6AX7EHRGp3OTb9vvBOUReD9C2FnuC8Z0ap9KSCC9ClWxyFx/cxcIGrqtGXwjImaYhOApMJtRHLyrLPdfqGJ+z4TPzJZZ38Gufsh6uslfF65TxUwCIrPUYTx8qHo2A3LSdSWy7rsI9xbMrHFvwsfhi/XYsO3u4Hqi59/EtwOPHvQg+reMdENFMPsOA8cMw0HzA2gmKJ/3rhFx/9gKvizdjSkCb4JVtDPC+rK0qY/Pd0bi16qAuza0+hD/p6gEWyMKtsjnJMNhcVedaC5tsF4SU/f4IgjNtOVueOC105yub6y31GHyWDV5Si/56ApCq3D3m9pzN1tpeyuTqWdyrSoa9y9oEtwIYV31NnoJG7C9/VxMWX/YDcy8Z9bDLJ/wXoIYj8kj7EvyUWA3EKIpDtcArjR9BmN8WHvGpkreDjgC1/6cj2rzdsTMEFr6Fkgtrb0bz4fSWCddYJNnF+2yD1sEi+zD8htK+2FjFNu0se3A25eqzfMbDC9dcRxOmtSnyILpdBWsQlF15n//2B1wVF+nXTCns9rpl8PVQBHP+phE01Wwqt+PHehnCcL2+VL3XhYmTtDwPkRjUJ+4m5eo94KE1oeV4Osn5B58jt49bph4NuQpbO77ppNGa+ClOggmTqBJP5r1YWkq0eaPyy/L5e9UDaHCxImHYJDHGKuk++fy9L5lRrRphglWSVkfUd3zX1BVu5+Wp1+Wj3PNtP1ECNGUFQicK42Gyy+UUoXyy540nv8SLmoE8BAsA8PBPGeGXx3Fs2SCT6vrxf54eNYfZrpFg3w+bq3U4q1ofAmI+j+sqNnwXrtISfjahGcD6XWYW7Mr9gI2YxedNmRkahkXTgnDe8rIuhZZ8zWPUM9IfFadw7X3S4RHwLlerzbkhGeBC3DmZtrFwga5DodUfoVyvOLIfVs0NfHFYHOhcPt9A/GYn3f38ZOaoFFsmK3RetMSoenS3IXHmvmCRRhi8EwD9cS8SqyaSyfuzGq8uInk6PtCt90FClevPNmL9URqqOT+b2+k9R9mhnHeZa9mT7gP8j5HNXLvbGYTnxOLeSRsxWqePdf7phDvFmzLTSzzO7Gm4/9c7J2Mzi9Gns37RLVdA7IsbGhq31w1emBXDfDrgs1JeFortixDHejLneFmpHYpl6uktQ7EhhFNJ6wVy03KxcxLD/CXv5P2RtPEG/8v/r5ctlgrxGTu/rQxnILY6I9rblxv2aZJiPZp9tDe3VEL/zchNoc8TR9OxrNPzE4IIWr3fjZ23BXEnDN0KLhLLfpcdjPyzuWJHiKQcNggaEbeWUamCLHmJCnefaGMlkoppZRSSimllFJK+aflfykGFw8QYdU/AAAAAElFTkSuQmCC" alt="CSIC">
+    <img src="http://digital.psico.edu.uy/sites/default/files/banner1.png" alt="digital psico">
+  </div>
+
+  </div>
