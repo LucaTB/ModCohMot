@@ -8,6 +8,7 @@ import { Exp1Component } from './pages/exp1/exp1.component';
 import { Exp2Component } from './pages/exp2/exp2.component';
 import { Exp3Component } from './pages/exp3/exp3.component';
 import { PdiComponent } from './pages/pdi/pdi.component';
+import { NavbarComponent } from './comps/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PdiComponent } from './pages/pdi/pdi.component';
     Exp1Component,
     Exp2Component,
     Exp3Component,
-    PdiComponent
+    PdiComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
