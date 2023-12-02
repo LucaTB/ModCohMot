@@ -40,54 +40,12 @@ body {
   min-height: 100vh;
   overflow: hidden;
   background: #dcd9cd;
-}
-
-/* Estilos generales para dispositivos pequeños */
-body {
-    background-color: black;
-    font-family: 'Open Sans', sans-serif;
-   }
-   
-   /* Estilos para dispositivos medianos */
-   @media screen and (min-width: 768px) {
-    body {
-       font-size: 16px;
-    }
-    ul li {
-        size: 1.5em;
-    }
-   }
-   
-   /* Estilos para dispositivos grandes */
-   @media screen and (min-width: 992px) {
-    body {
-       font-size: 18px;
-    }
-   }
-   
-   /* Estilos para dispositivos extra grandes */
-   @media screen and (min-width: 1200px) {
-    body {
-       font-size: 20px;
-    }
-   }
-   @media screen and (min-width: 480px) {
-    body {
-      background-color: black;
-    }
-    #nav-item{
-      display:block;
-      width: 100%;
-    }
-  }
-  
+} 
   
   .main-section{
     display: block;
     justify-content: center;
     float:left;
-    radius:20px;
-    padding:20px;
     margin-bottom: 10px;
   }
   
@@ -134,15 +92,59 @@ body {
     width:100%;
     justify-content:space-around;
     list-style:none;
-    margin-top:25px;
   }
   p, header, h4{
     color: #F6EB14;
    }
-   p{
-    margin: 20px;
-   }
    img {
     width: 100%;
     height: 100%;
+}
+
+/* Estilos generales para dispositivos pequeños */
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+ }
+ 
+ /* Estilos para dispositivos medianos */
+ @media screen and (min-width: 768px) {
+  body {
+     font-size: 16px;
+  }
+  ul li {
+      size: 1.5em;
+  }
+ }
+ 
+ /* Estilos para dispositivos grandes */
+ @media screen and (min-width: 992px) {
+  body {
+     font-size: 18px;
+  }
+ }
+ 
+ /* Estilos para dispositivos extra grandes */
+ @media screen and (min-width: 1200px) {
+  body {
+     font-size: 20px;
+  }
+ }
+ @media screen and (min-width: 320px) {
+  body {
+    font-size: xx-small;
+    background-color: black;
+  }
+.dropdown-menu.show{
+font-size: x-small;
+}
+header{
+font-size: small;
+margin-top: 0px;
+margin-bottom: 1px;
+}
+h4{
+font-size: smaller;
+margin-bottom: 15px;
+}
 }
