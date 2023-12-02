@@ -5,6 +5,9 @@ body {
 
 
 .button-70 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   background-image: linear-gradient(#0dccea, #0d70ea);
   border: 0;
   border-radius: 4px;
@@ -21,16 +24,15 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-a {
-    color: white;
-}
-@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Cairo', sans-serif;}
+  font-family: 'Press Start 2P', sans-serif;
+}
 body {
   display: flex;
   justify-content: center;
@@ -39,78 +41,10 @@ body {
   overflow: hidden;
   background: #dcd9cd;
 }
-ul {
-  position: relative;
-}
-ul li {
-  list-style: none;
-  text-align: center;
-}
-ul li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 3em;
-  padding: 5px 20px;
-  display: inline-flex;
-  font-weight: 700;
-  transition: 0.5s;
-}
-ul:hover li a {
-  color: #0002;
-}
-ul li:hover a {
-  color: #000;
-  background: transparent;
-}
-ul li a:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5em;
-  color: rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 500px;
-  transition: letter-spacing 0.5s, left 0.5s;
-}
-ul li a:hover:before {
-  content: attr(data-text);
-  opacity: 1;
-  left: 50%;
-  letter-spacing: 10px;
-  width: 1800px;
-  height: 1800px;
-}
-ul li:nth-child(6n + 1) a:before {
-  background: #0470fe;
-}
-ul li:nth-child(6n + 2) a:before {
-  background: #ff7675;
-}
-ul li:nth-child(6n + 3) a:before {
-  background: #1582fe;
-}
-ul li:nth-child(6n + 4) a:before {
-  background: #a29bfe;
-}
-ul li:nth-child(6n + 5) a:before {
-  background: #fd79a8;
-}
-ul li:nth-child(6n + 6) a:before {
-  background: #ffeaa7;
-}
 
 /* Estilos generales para dispositivos pequeños */
 body {
-    background-color: #f8f9fa;
+    background-color: black;
     font-family: 'Open Sans', sans-serif;
    }
    
@@ -139,18 +73,18 @@ body {
    }
    @media screen and (min-width: 480px) {
     body {
-      background-color: #b5cdd6;
+      background-color: black;
     }
   }
   
   
   .main-section{
+    display: block;
+    justify-content: center;
     float:left;
     radius:20px;
-    margin-left:310px;
     padding:20px;
-    margin-bottom: 110px;
-    border-bottom: 1px solid;
+    margin-bottom: 10px;
   }
   
   nav{
@@ -163,7 +97,6 @@ body {
   
   section{
     display:block;
-    width: max-content;
     margin:20px;
   }
   #main-doc{
@@ -172,23 +105,41 @@ body {
   
   .container{
     width:100%;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr;
-    grid-gap:10px;
-    grid-template-areas:
-    "#navbar #navbar #navbar"
-    "main-section main-section main-section"
-    "main-section main-section main-section";
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   
   ul{
       padding: 10px 30px;
-      border-top: 1px solid;
-      border-color:#6a8b96;
   }
   
   header{
     font-size:3vw;
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
+  #navbar{
+    display:block;
+    width:100%;   
+    height:auto;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:2;
+    margin: auto;
+  }
+  ul{
+    display:flex;
+    width:100%;
+    justify-content:space-around;
+    list-style:none;
+    margin-top:25px;
+  }
+  p, header, h4{
+    color: #F6EB14;
+   }
+   p{
+    margin: 20px;
+   }

@@ -1,25 +1,50 @@
-body {
-    background-color: #f8f9fa;
-    font-family: 'Open Sans', sans-serif;
-   }
-   
-   @media screen and (min-width: 239px) {
-    body {
-       font-size: 16px;
-    }
-    li {
-        font-size: 16px;
-    }
-   }
-   
-   @media screen and (min-width: 992px) {
-    body {
-       font-size: 18px;
-    }
-   }
-   
-   @media screen and (min-width: 1200px) {
-    body {
-       font-size: 20px;
-    }
-   }
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 1rem;
+  line-height: 2;
+  height: 100%;
+  background-color: #221;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #fff090;
+}
+
+li {
+  color: #4FAF44;
+}
+
+.arrow i {
+  display: none;
+}
+
+.arrow {
+  position:relative;
+	display: block;
+  color: #F6EB14;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.arrow:hover i { 
+  display: block;
+  position: absolute;
+  top: 0.50em; 
+  left: -6em;
+}
+

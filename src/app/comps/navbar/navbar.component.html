@@ -1,7 +1,7 @@
 <header class="d-flex justify-content-center py-3">
     <ul class="nav nav-pills">
-      <li class="nav-item"><a href="/exp2/#main" class="nav-link" aria-current="page">Información general</a></li>
-      <li class="nav-item"><a href="/exp2/#disexp" class="nav-link">Diseño experimental</a></li>
-      <li class="nav-item"><a href="/exp2/#tabla" class="nav-link">Resultados</a></li>
+      <li class="nav-item"><a [routerLink]="['/exp1/#main']" fragment="main" class="nav-link" aria-current="page">Información general</a></li>
+      <li class="nav-item"><a [routerLink]="['/exp1/#disexp']" fragment="disexp" class="nav-link">Diseño experimental</a></li> 
+      <li class="nav-item"><a [routerLink]="['/exp1/#disexp']" fragment="tabla" class="nav-link">Resultados</a></li>
     </ul>
   </header>
