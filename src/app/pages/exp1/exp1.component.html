@@ -1,8 +1,14 @@
 <section class="navbar" id="navbar">
     <ul class="nav nav-pills">
-      <li class="nav-item"><a href="/exp1/#main">Información general</a></li>
-      <li class="nav-item"><a href="/exp1/#disexp">Diseño experimental</a></li>
-      <li class="nav-item"><a href="/exp1/#tabla">Resultados</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+      <a class="dropdown-item" href="/exp1/#main">Información general</a>
+      <a class="dropdown-item" href="/exp1/#disexp">Diseño experimental</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="/exp1/#tabla">Resultados</a>
+    </div>
+        </li>
     </ul>
     </section>
 <main id="main-doc">
@@ -20,13 +26,13 @@
 <section id="disexp" class="main-section">
 <div>
     <header>Diseño experimental:</header>
-    <img src="assets/Ex1.png">
+    <img id="imagen" src="assets/Ex1.png">
 </div>
 </section>
 <section id="tabla" class="main-section">
     <div>
     <header>Tabla de clasificación temporal</header>
- <img src="assets/Tab1.png">
+ <img id="imagen" src="assets/Tab1.png">
 </div>
 </section>
 </div>
